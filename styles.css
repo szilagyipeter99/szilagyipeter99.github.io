@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+  font-family: 'Sans Pro', sans-serif;
+}
+
+#hibasadat {
+  visibility: hidden;
+  color: red;
+}
