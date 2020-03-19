@@ -1,10 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-<h1>yolo</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Teszt játék</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>Üdvözöllek</h1>
+  <button type="submit" class="btn btn-lg btn-outline-dark" onclick="go()">Kezdés</button>
+  <br><br>
+  <button type="button" class="btn btn-lg btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Admin belépés</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <form> -->
+          <div class="form-group">
+            <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" id="email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control"  placeholder="Password" id="password">
+          </div>
+          <h3 id="hibasadat">Hibás adat!</h3>
+          <!-- </form> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">Vissza</button>
+          <button type="button" class="btn btn-lg btn-outline-dark" id="okBtn">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal -->
+  <!-- <h1>Ez itt a kérdés, válaszolj te!</h1> -->
+  <div id="kerdesekdiv">
+
+  </div>
+  <button type="button" class="btn btn-lg btn-outline-dark" onclick="A()">A</button>
+  <button type="button" class="btn btn-lg btn-outline-dark" onclick="B()">B</button>
+  <button type="button" class="btn btn-lg btn-outline-dark" onclick="C()">C</button>
+  <button type="button" class="btn btn-lg btn-outline-dark" onclick="D()">D</button>
+  <button type="button" class="btn btn-lg btn-outline-dark" onclick="E()">E</button>
+
+  <h1>Helyes válasz: B</h1>
+
+  <button type="button" class="btn btn-lg btn-outline-dark" onclick="Easy()">Tovább</button>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
 </html>
