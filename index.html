@@ -3,81 +3,219 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Teszt játék</title>
-
-
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:200,400,700,900&amp;display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blender kurzus 2020</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
-  <h1>Üdvözöllek</h1>
-  <button type="submit" class="btn btn-lg btn-outline-dark" onclick="go()">Kezdés</button>
-  <br><br>
-  <button type="button" class="btn btn-lg btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Admin belépés</button>
+  <section class="kezdolap">
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- <form> -->
-          <div class="form-group">
-            <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" id="email">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Sylp. 3D</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="#">Kapcsolat</a>
+          <a class="nav-item nav-link" href="#">Profilom</a>
+          <a class="nav-item nav-link" href="#">Kilépés</a>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="font-size: 3.5rem;color: #221E22;font-weight: 900;margin-top:2rem;margin-bottom:2rem;">BLENDER 2.8 KURZUS</div>
+    <div class="progressek">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="feher-kartya">
+            <h3 class="kartyacim">Navigáció</h3>
+            <div class="progress">
+              <div id="progressbar1" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="kartyaszazalek" id="szazalek1">70%</h4>
+            <!-- <button type="button" class="btn btn-outline-dark">Tovább &darr;</button> -->
           </div>
-          <div class="form-group">
-            <input type="password" class="form-control"  placeholder="Password" id="password">
-          </div>
-          <h3 id="hibasadat">Hibás adat!</h3>
-          <!-- </form> -->
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">Vissza</button>
-          <button type="button" class="btn btn-lg btn-outline-dark" id="okBtn">OK</button>
+        <div class="col-lg-6">
+          <div class="feher-kartya">
+            <h3 class="kartyacim">Kezelőfelület</h3>
+            <div class="progress">
+              <div id="progressbar2" class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="kartyaszazalek" id="szazalek2">55%</h4>
+            <!-- <button type="button" class="btn btn-outline-dark">Tovább &darr;</button> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="feher-kartya">
+            <h3 class="kartyacim">Modellezés</h3>
+            <div class="progress">
+              <div id="progressbar3" class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="kartyaszazalek" id="szazalek3">30%</h4>
+            <!-- <button type="button" class="btn btn-outline-dark">Tovább &darr;</button> -->
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="feher-kartya">
+            <h3 class="kartyacim">Renderelés</h3>
+            <div class="progress">
+              <div id="progressbar4" class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h4 class="kartyaszazalek" id="szazalek4">12%</h4>
+            <!-- <button type="button" class="btn btn-outline-dark">Tovább &darr;</button> -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- End of Modal -->
-  <!-- <h1>Ez itt a kérdés, válaszolj te!</h1> -->
-  <div id="kerdesekdiv">
-
-  </div>
-  <button type="button" class="btn btn-lg btn-outline-dark" onclick="A()">A</button>
-  <button type="button" class="btn btn-lg btn-outline-dark" onclick="B()">B</button>
-  <button type="button" class="btn btn-lg btn-outline-dark" onclick="C()">C</button>
-  <button type="button" class="btn btn-lg btn-outline-dark" onclick="D()">D</button>
-  <button type="button" class="btn btn-lg btn-outline-dark" onclick="E()">E</button>
-
-  <h1>Helyes válasz: B</h1>
-
-  <button type="button" class="btn btn-lg btn-outline-dark" onclick="Easy()">Tovább</button>
 
 
+  </section>
+
+  <section class="tananyag noisy">
+    <div class="videok">
+
+      <div class="gradtext">1. NAVIGÁCIÓ</div>
+
+      <div id="lenyilasok1">
+
+        <div class="card">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pipa11" onclick="pipalt(1,1)"> <!-- MÓDOSÍTÁS -->
+          </div>
+          <div class="card-header" id="videocim11"> <!-- MÓDOSÍTÁS -->
+            <h5 class="mb-0">
+              <button class="btn btn-link  btn-block  collapsed" data-toggle="collapse" data-target="#lenyilo11" aria-expanded="false" aria-controls="lenyilo11"><!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS -->
+              Bevezető, Blender letöltése
+              </button>
+            </h5>
+          </div>
+          <div id="lenyilo11" class="collapse" aria-labelledby="videocim11" data-parent="#lenyilasok1"> <!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS -->
+            <div class="card-body">
+              <div class="vid-container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
+        <div class="card">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pipa12" onclick="pipalt(1,2)"> <!-- MÓDOSÍTÁS -->
+          </div>
+          <div class="card-header" id="videocim12"> <!-- MÓDOSÍTÁS -->
+            <h5 class="mb-0">
+              <button class="btn btn-link  btn-block  collapsed" data-toggle="collapse" data-target="#lenyilo12" aria-expanded="false" aria-controls="lenyilo12"><!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS -->
+                Gyorsgombok megismerése
+              </button>
+            </h5>
+          </div>
+          <div id="lenyilo12" class="collapse" aria-labelledby="videocim12" data-parent="#lenyilasok1"> <!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS -->
+            <div class="card-body">
+              <div class="vid-container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="pipa13" onclick="pipalt(1,3)"> <!-- MÓDOSÍTÁS -->
+          </div>
+          <div class="card-header" id="videocim13"> <!-- MÓDOSÍTÁS -->
+            <h5 class="mb-0">
+              <button class="btn btn-link  btn-block  collapsed" data-toggle="collapse" data-target="#lenyilo13" aria-expanded="false" aria-controls="lenyilo13"><!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS -->
+              Navigáció az egérrel
+              </button>
+            </h5>
+          </div>
+          <div id="lenyilo13" class="collapse" aria-labelledby="videocim13" data-parent="#lenyilasok1"> <!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS --><!-- MÓDOSÍTÁS -->
+            <div class="card-body">
+              <div class="vid-container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
 
+      <div class="gradtext">2. KEZELŐFELÜLET</div>
+      <div id="accordion2">
+        <div class="card">
+          <div class="card-header" id="headingOne2">
+            <h5 class="mb-0">
+              <button class="btn btn-link  btn-block  collapsed" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+                <i>1</i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordion2">
+            <div class="card-body">
+              <div class="vid-container">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo2">
+            <h5 class="mb-0">
+              <button class="btn btn-link btn-block collapsed" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                <i>2</i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
+            <div class="card-body">
+              yollo
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree2">
+            <h5 class="mb-0">
+              <button class="btn btn-link  btn-block  collapsed" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                <i>3</i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion2">
+            <div class="card-body">
+              swag
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <hr>
+      <p class="text-footer">© 2020 sylp3d.hu Minden jog fenntartva!</p>
+    </div>
+  </footer>
 
 
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
-
-  <script src="index.js" charset="utf-8"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="tanulas.js"></script>
 </body>
 
 </html>
